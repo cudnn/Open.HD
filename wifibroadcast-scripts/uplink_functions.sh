@@ -114,7 +114,7 @@ function mspdownlinktx_function {
 	
     while [ $VIDEOTXRUNNING -ne 1 ]; do
 		sleep 0.5
-		VIDEOTXRUNNING=`pidof raspivid | wc -w`
+		VIDEOTXRUNNING=`pidof openhdvid | wc -w`
 		echo -n "."
     done
 	
