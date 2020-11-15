@@ -1,3 +1,3 @@
-ionice -c 3 nice dos2unix -n /boot/joyconfig.txt /tmp/rctx.h > /dev/null 2>&1
-gcc -lrt -I/home/pi/wifibroadcast-base rctx.c -o rctx `sdl-config --libs` `sdl-config --cflags`
-gcc -lrt -I/home/pi/wifibroadcast-base rcswitches.c -o rcswitches `sdl-config --libs` `sdl-config --cflags`
+g++ -std=c++11 -I../wifibroadcast-base rctx.cpp -o rctx `sdl-config --libs` `sdl-config --cflags` -lrt -lpcap -lboost_system -lboost_regex -lboost_filesystem -lboost_thread -lpthread
+g++ -std=c++11 -I../wifibroadcast-base rcswitches.cpp -o rcswitches `sdl-config --libs` `sdl-config --cflags` -lrt 
+gcc -lrt -I../wifibroadcast-base JoystickSender.c -o JoystickSender `sdl-config --libs` `sdl-config --cflags`
